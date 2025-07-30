@@ -1,0 +1,24 @@
+# Core dependencies
+pandas==1.5.3
+numpy==1.23.5
+pyarrow
+openpyxl
+faker
+
+# Validation & profiling
+great_expectations==0.16.8
+ydata-profiling
+
+# Orchestration & automation
+apache-airflow==2.7.2
+schedule
+
+# Web UI
+streamlit
+localtunnel
+
+# Optional: SQLite utilities for lightweight cataloging
+sqlite-utils
+
+# Ngrok if not using localtunnel
+# pyngrok
