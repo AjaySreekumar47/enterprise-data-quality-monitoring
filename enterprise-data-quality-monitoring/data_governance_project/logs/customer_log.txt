@@ -1,0 +1,18 @@
+[2025-07-30T17:36:38.375007] Null Check: 
+customer_id    0
+name           0
+email          0
+age            0
+[2025-07-30T17:36:38.387862] Duplicate Check: 0 duplicates found
+[2025-07-30T17:36:38.391920] Schema Check: All good ✅
+[2025-07-30T17:36:38.405370] Outlier Check (customer_id): 0 outliers detected
+[2025-07-30T17:36:38.410753] Outlier Check (age): 0 outliers detected
+[2025-07-30T17:41:22.571171] Null Check: 
+customer_id    0
+name           0
+email          0
+age            0
+[2025-07-30T17:41:22.581915] Duplicate Check: 0 duplicates found
+[2025-07-30T17:41:22.586360] Schema Check: All good ✅
+[2025-07-30T17:41:22.593855] Outlier Check (customer_id): 0 outliers detected
+[2025-07-30T17:41:22.599890] Outlier Check (age): 0 outliers detected

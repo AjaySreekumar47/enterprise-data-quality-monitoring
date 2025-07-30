@@ -1,0 +1,24 @@
+[2025-07-30T17:36:38.481589] Null Check: 
+sale_id        0
+customer_id    0
+product_id     0
+amount         0
+date           0
+[2025-07-30T17:36:38.502170] Duplicate Check: 0 duplicates found
+[2025-07-30T17:36:38.506924] Schema Check: All good ✅
+[2025-07-30T17:36:38.514380] Outlier Check (sale_id): 0 outliers detected
+[2025-07-30T17:36:38.520459] Outlier Check (customer_id): 0 outliers detected
+[2025-07-30T17:36:38.526574] Outlier Check (product_id): 0 outliers detected
+[2025-07-30T17:36:38.534025] Outlier Check (amount): 0 outliers detected
+[2025-07-30T17:41:22.674845] Null Check: 
+sale_id        0
+customer_id    0
+product_id     0
+amount         0
+date           0
+[2025-07-30T17:41:22.690611] Duplicate Check: 0 duplicates found
+[2025-07-30T17:41:22.694655] Schema Check: All good ✅
+[2025-07-30T17:41:22.703982] Outlier Check (sale_id): 0 outliers detected
+[2025-07-30T17:41:22.710638] Outlier Check (customer_id): 0 outliers detected
+[2025-07-30T17:41:22.716974] Outlier Check (product_id): 0 outliers detected
+[2025-07-30T17:41:22.725088] Outlier Check (amount): 0 outliers detected

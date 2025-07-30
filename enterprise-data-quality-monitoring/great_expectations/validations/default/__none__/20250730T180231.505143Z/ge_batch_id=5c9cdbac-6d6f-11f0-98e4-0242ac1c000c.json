@@ -1,0 +1,256 @@
+{
+  "evaluation_parameters": {},
+  "meta": {
+    "batch_kwargs": {
+      "ge_batch_id": "5c9cdbac-6d6f-11f0-98e4-0242ac1c000c"
+    },
+    "batch_markers": {},
+    "batch_parameters": {},
+    "checkpoint_id": null,
+    "expectation_suite_meta": {
+      "great_expectations_version": "0.16.8"
+    },
+    "expectation_suite_name": "default",
+    "great_expectations_version": "0.16.8",
+    "run_id": {
+      "run_name": null,
+      "run_time": "2025-07-30T18:02:31.505143+00:00"
+    },
+    "validation_id": null,
+    "validation_time": "20250730T180231.505422Z"
+  },
+  "results": [
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "sale_id",
+          "result_format": {
+            "result_format": "SUMMARY"
+          }
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 50000,
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_unique",
+        "kwargs": {
+          "column": "sale_id",
+          "result_format": {
+            "result_format": "SUMMARY"
+          }
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 50000,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "customer_id",
+          "result_format": {
+            "result_format": "SUMMARY"
+          }
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 50000,
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "product_id",
+          "result_format": {
+            "result_format": "SUMMARY"
+          }
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 50000,
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "amount",
+          "result_format": {
+            "result_format": "SUMMARY"
+          }
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 50000,
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "column": "amount",
+          "min_value": 0.01,
+          "result_format": {
+            "result_format": "SUMMARY"
+          }
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 50000,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "date",
+          "result_format": {
+            "result_format": "SUMMARY"
+          }
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 50000,
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_strftime_format",
+        "kwargs": {
+          "column": "date",
+          "result_format": {
+            "result_format": "SUMMARY"
+          },
+          "strftime_format": "%Y-%m-%d"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 50000,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    }
+  ],
+  "statistics": {
+    "evaluated_expectations": 8,
+    "success_percent": 100.0,
+    "successful_expectations": 8,
+    "unsuccessful_expectations": 0
+  },
+  "success": true
+}

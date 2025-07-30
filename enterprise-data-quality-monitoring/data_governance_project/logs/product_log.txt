@@ -1,0 +1,16 @@
+[2025-07-30T17:36:38.421833] Null Check: 
+product_id    0
+name          0
+price         0
+[2025-07-30T17:36:38.428279] Duplicate Check: 0 duplicates found
+[2025-07-30T17:36:38.432445] Schema Check: All good ✅
+[2025-07-30T17:36:38.437042] Outlier Check (product_id): 0 outliers detected
+[2025-07-30T17:36:38.457264] Outlier Check (price): 0 outliers detected
+[2025-07-30T17:41:22.628633] Null Check: 
+product_id    0
+name          0
+price         0
+[2025-07-30T17:41:22.635416] Duplicate Check: 0 duplicates found
+[2025-07-30T17:41:22.638864] Schema Check: All good ✅
+[2025-07-30T17:41:22.643152] Outlier Check (product_id): 0 outliers detected
+[2025-07-30T17:41:22.647859] Outlier Check (price): 0 outliers detected

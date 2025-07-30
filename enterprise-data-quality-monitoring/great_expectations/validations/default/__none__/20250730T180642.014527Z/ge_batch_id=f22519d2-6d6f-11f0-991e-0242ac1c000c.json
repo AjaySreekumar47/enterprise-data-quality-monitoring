@@ -1,0 +1,195 @@
+{
+  "evaluation_parameters": {},
+  "meta": {
+    "batch_kwargs": {
+      "ge_batch_id": "f22519d2-6d6f-11f0-991e-0242ac1c000c"
+    },
+    "batch_markers": {},
+    "batch_parameters": {},
+    "checkpoint_id": null,
+    "expectation_suite_meta": {
+      "great_expectations_version": "0.16.8"
+    },
+    "expectation_suite_name": "default",
+    "great_expectations_version": "0.16.8",
+    "run_id": {
+      "run_name": null,
+      "run_time": "2025-07-30T18:06:42.014527+00:00"
+    },
+    "validation_id": null,
+    "validation_time": "20250730T180642.014947Z"
+  },
+  "results": [
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "product_id",
+          "result_format": {
+            "result_format": "SUMMARY"
+          }
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 200,
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_unique",
+        "kwargs": {
+          "column": "product_id",
+          "result_format": {
+            "result_format": "SUMMARY"
+          }
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 200,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "name",
+          "result_format": {
+            "result_format": "SUMMARY"
+          }
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 200,
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "price",
+          "result_format": {
+            "result_format": "SUMMARY"
+          }
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 200,
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "column": "price",
+          "result_format": {
+            "result_format": "SUMMARY"
+          },
+          "type_": "float64"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "float64"
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "column": "price",
+          "min_value": 0.01,
+          "result_format": {
+            "result_format": "SUMMARY"
+          }
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 200,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    }
+  ],
+  "statistics": {
+    "evaluated_expectations": 6,
+    "success_percent": 100.0,
+    "successful_expectations": 6,
+    "unsuccessful_expectations": 0
+  },
+  "success": true
+}

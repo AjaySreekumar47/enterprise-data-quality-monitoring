@@ -1,0 +1,284 @@
+{
+  "evaluation_parameters": {},
+  "meta": {
+    "batch_kwargs": {
+      "ge_batch_id": "e8e3a042-6d6e-11f0-a9cf-0242ac1c000c"
+    },
+    "batch_markers": {},
+    "batch_parameters": {},
+    "checkpoint_id": null,
+    "expectation_suite_meta": {
+      "great_expectations_version": "0.16.8"
+    },
+    "expectation_suite_name": "default",
+    "great_expectations_version": "0.16.8",
+    "run_id": {
+      "run_name": null,
+      "run_time": "2025-07-30T17:59:17.009471+00:00"
+    },
+    "validation_id": null,
+    "validation_time": "20250730T175917.009840Z"
+  },
+  "results": [
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "customer_id",
+          "result_format": {
+            "result_format": "SUMMARY"
+          }
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 5000,
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "column": "email",
+          "result_format": {
+            "result_format": "SUMMARY"
+          }
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 5000,
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_match_regex",
+        "kwargs": {
+          "column": "email",
+          "regex": "[^@]+@[^@]+\\\\.[^@]+",
+          "result_format": {
+            "result_format": "SUMMARY"
+          }
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 5000,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 2,
+            "value": "andrea61@example.com"
+          },
+          {
+            "count": 2,
+            "value": "brian89@example.net"
+          },
+          {
+            "count": 2,
+            "value": "danderson@example.com"
+          },
+          {
+            "count": 2,
+            "value": "dmartinez@example.com"
+          },
+          {
+            "count": 2,
+            "value": "eharris@example.net"
+          },
+          {
+            "count": 2,
+            "value": "figueroanicholas@example.net"
+          },
+          {
+            "count": 2,
+            "value": "fjones@example.com"
+          },
+          {
+            "count": 2,
+            "value": "ianderson@example.org"
+          },
+          {
+            "count": 2,
+            "value": "jennifer95@example.org"
+          },
+          {
+            "count": 2,
+            "value": "kenneth37@example.net"
+          },
+          {
+            "count": 2,
+            "value": "michael26@example.com"
+          },
+          {
+            "count": 2,
+            "value": "michael79@example.org"
+          },
+          {
+            "count": 2,
+            "value": "nthomas@example.org"
+          },
+          {
+            "count": 2,
+            "value": "rachel38@example.net"
+          },
+          {
+            "count": 2,
+            "value": "richard37@example.com"
+          },
+          {
+            "count": 2,
+            "value": "sara16@example.com"
+          },
+          {
+            "count": 2,
+            "value": "smithamanda@example.com"
+          },
+          {
+            "count": 2,
+            "value": "smithdaniel@example.com"
+          },
+          {
+            "count": 2,
+            "value": "usmith@example.com"
+          },
+          {
+            "count": 2,
+            "value": "ymartin@example.com"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "partial_unexpected_list": [
+          "kimparrish@example.org",
+          "paul67@example.net",
+          "kchang@example.org",
+          "hartjacob@example.net",
+          "ashleyday@example.org",
+          "obarrera@example.com",
+          "nnichols@example.com",
+          "petersonmichaela@example.com",
+          "brian25@example.net",
+          "skane@example.net",
+          "denisethomas@example.net",
+          "shannonbaldwin@example.com",
+          "andersonlauren@example.net",
+          "peter42@example.net",
+          "christophersanchez@example.net",
+          "aliciasmith@example.net",
+          "aleccarlson@example.net",
+          "nrobinson@example.org",
+          "qgardner@example.com",
+          "tracy34@example.org"
+        ],
+        "unexpected_count": 5000,
+        "unexpected_percent": 100.0,
+        "unexpected_percent_nonmissing": 100.0,
+        "unexpected_percent_total": 100.0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "column": "age",
+          "result_format": {
+            "result_format": "SUMMARY"
+          },
+          "type_": "int64"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "int64"
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_table_row_count_to_be_between",
+        "kwargs": {
+          "max_value": 100000,
+          "min_value": 1,
+          "result_format": {
+            "result_format": "SUMMARY"
+          }
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 5000
+      },
+      "success": true
+    }
+  ],
+  "statistics": {
+    "evaluated_expectations": 5,
+    "success_percent": 80.0,
+    "successful_expectations": 4,
+    "unsuccessful_expectations": 1
+  },
+  "success": false
+}
