@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# Local inspection / scratch files
+inspect_data.py
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Great Expectations generated runtime outputs
+great_expectations/uncommitted/data_docs/validations/
+great_expectations/validations/

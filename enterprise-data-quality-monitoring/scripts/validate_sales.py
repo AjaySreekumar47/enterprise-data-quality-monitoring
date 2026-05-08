@@ -1,38 +1,34 @@
-import os
 from pathlib import Path
 
 import pandas as pd
 from great_expectations.data_context import DataContext
 from great_expectations.core.batch import RuntimeBatchRequest
 
-# Portable local paths
 ROOT_DIR = Path(__file__).resolve().parents[1]
 
 ge_path = ROOT_DIR / "great_expectations"
 data_base_path = ROOT_DIR / "data_governance_project" / "data_lake" / "raw" / "year=2023"
-suite_name = "customer_suite"
+suite_name = "sales_suite"
 
-# Load Great Expectations context
 context = DataContext(context_root_dir=str(ge_path))
 
-# Discover available monthly customer partitions
-customer_files = sorted(data_base_path.glob("month=*/customer.parquet"))
+sales_files = sorted(data_base_path.glob("month=*/sales.parquet"))
 
-if not customer_files:
-    raise FileNotFoundError(f"No customer parquet files found under: {data_base_path}")
+if not sales_files:
+    raise FileNotFoundError(f"No sales parquet files found under: {data_base_path}")
 
-for data_path in customer_files:
+for data_path in sales_files:
     month = data_path.parent.name.replace("month=", "")
-    print(f"\n📦 Validating data for month={month}")
+    print(f"\n📦 Validating sales data for month={month}")
 
     df = pd.read_parquet(data_path)
 
     batch_request = RuntimeBatchRequest(
         datasource_name="my_filesystem_datasource",
         data_connector_name="default_runtime_data_connector_name",
-        data_asset_name=f"customer_month_{month}",
+        data_asset_name=f"sales_month_{month}",
         runtime_parameters={"batch_data": df},
-        batch_identifiers={"default_identifier_name": f"month_{month}"},
+        batch_identifiers={"default_identifier_name": f"sales_month_{month}"},
     )
 
     validator = context.get_validator(
@@ -43,9 +39,8 @@ for data_path in customer_files:
     context.run_validation_operator(
         "action_list_operator",
         assets_to_validate=[validator],
-        run_id=f"validation_month_{month}",
+        run_id=f"sales_validation_month_{month}",
     )
 
 context.build_data_docs()
-
-print(f"✅ All validations complete. Open: {ge_path / 'uncommitted' / 'data_docs' / 'index.html'}")
+print(f"✅ Sales validations complete. Open: {ge_path / 'uncommitted' / 'data_docs' / 'index.html'}")
