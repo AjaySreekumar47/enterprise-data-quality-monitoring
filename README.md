@@ -1,155 +1,249 @@
-# 🧪 Enterprise Data Quality & Governance Monitoring System
+# Enterprise Data Quality & Governance Monitoring System
 
-This project simulates a full-stack data quality monitoring system designed for modern enterprise data lakes. It combines synthetic data ingestion, manual and automated validation, report generation, and Airflow-based orchestration to create a scalable and modular governance framework.
+A local, portfolio-ready data quality monitoring project for synthetic enterprise datasets. The project demonstrates raw data ingestion, Parquet-based data lake storage, manual quality logs, Great Expectations validation suites, a Streamlit monitoring dashboard, and optional Airflow DAG orchestration.
 
 ---
 
-## 📁 Project Structure
+## Project Overview
 
-```
+This project simulates a small enterprise data quality workflow across three business datasets:
 
-data\_governance\_project/
-├── ingestion/                    # Raw input files (CSV/XLSX)
-├── data\_lake/raw/year=2023/month=07/   # Partitioned Parquet files
-├── quality/                      # (Optional) Intermediate validation results
-├── profiling/                    # (Optional) Data profiling outputs
-├── catalog/                      # (Optional) Schema/catalog metadata
-├── logs/                         # Text logs from manual checks
-├── reports/                      # HTML reports from Great Expectations
-├── great\_expectations/          # GE suite configuration & data docs
-├── dags/                         # Airflow DAGs for orchestration
-└── validate\_\*.py                 # Validation scripts for each dataset
+- `customers`
+- `products`
+- `sales`
 
+The pipeline validates raw/curated data assets using both manual quality logs and Great Expectations expectation suites. A Streamlit dashboard provides an executive-friendly view of dataset health, schema profiles, validation logs, and the generated Great Expectations Data Docs.
+
+---
+
+## Repository Structure
+
+```text
+enterprise-data-quality-monitoring/
+├── data_governance_project/
+│   ├── ingestion/
+│   │   ├── customer.csv
+│   │   ├── product.xlsx
+│   │   └── sales.csv
+│   ├── data_lake/
+│   │   └── raw/year=2023/month=07/
+│   │       ├── customer.parquet
+│   │       ├── product.parquet
+│   │       └── sales.parquet
+│   └── logs/
+│       ├── customer_log.txt
+│       ├── product_log.txt
+│       └── sales_log.txt
+├── great_expectations/
+│   ├── great_expectations.yml
+│   ├── expectations/
+│   │   ├── customer_suite.json
+│   │   ├── product_suite.json
+│   │   └── sales_suite.json
+│   └── uncommitted/data_docs/
+├── scripts/
+│   ├── validate_customer.py
+│   ├── validate_product.py
+│   ├── validate_sales.py
+│   └── run_all_validations.py
+├── streamlit_app/
+│   └── dashboard.py
+├── dags/
+│   ├── customer_validation_dag.py
+│   ├── product_validation_dag.py
+│   ├── sales_validation_dag.py
+│   └── master_validation_dag.py
+├── notebooks/
+│   └── enterprise_data_quality_monitoring.ipynb
+├── requirements.txt
+└── README.md
 ````
 
 ---
 
-## 🚀 Features
+## Features
 
-| Feature | Description |
-|--------|-------------|
-| ✅ Synthetic Data Simulation | Generates realistic datasets for `customers`, `products`, and `sales` using `Faker` |
-| ✅ Ingestion to Data Lake | Converts CSV/XLSX to partitioned `.parquet` files for raw data lake storage |
-| ✅ Manual Data Quality Checks | Uses `pandas` to validate nulls, duplicates, schema, and outliers |
-| ✅ Automated Validation | Uses `Great Expectations` to run expectation suites and build HTML data docs |
-| ✅ Streamlit Dashboard | Launches a local dashboard for viewing validation logs and GE reports |
-| ✅ Airflow Orchestration | Runs modular DAGs per table and a master DAG to chain validation workflows |
-
----
-
-## 🛠️ Tools & Technologies
-
-- **Python 3.9 (virtualenv)**
-- [Faker](https://faker.readthedocs.io/) – for data generation  
-- [pandas + pyarrow](https://pandas.pydata.org/docs/) – for ingestion and Parquet conversion  
-- [Great Expectations](https://greatexpectations.io/) – for automated data validation and data docs  
-- [Streamlit](https://streamlit.io/) + [ngrok](https://ngrok.com/) – for live dashboarding  
-- [Apache Airflow](https://airflow.apache.org/) – for scheduling and orchestration  
+| Capability                     |      Status | Description                                                                                    |
+| ------------------------------ | ----------: | ---------------------------------------------------------------------------------------------- |
+| Synthetic enterprise datasets  | Implemented | Customer, product, and sales data are included as CSV/XLSX ingestion files                     |
+| Data lake storage              | Implemented | Curated datasets are stored as partitioned Parquet files                                       |
+| Manual quality logs            | Implemented | Text logs capture basic checks such as missing values, duplicates, schema checks, and outliers |
+| Great Expectations validation  | Implemented | Separate expectation suites exist for customer, product, and sales datasets                    |
+| End-to-end validation runner   | Implemented | `scripts/run_all_validations.py` runs all table validations                                    |
+| Streamlit monitoring dashboard | Implemented | Dashboard summarizes dataset health, schemas, logs, and GE report output                       |
+| Airflow DAG orchestration      |    Optional | DAGs are provided for Linux/WSL/Docker-based Airflow execution                                 |
 
 ---
 
-## 🧪 Data Validation Workflow
+## Dataset Summary
 
-### ✅ Manual (Pandas-based)
-- Null value check
-- Duplicate row check
-- Schema/data type check
-- Outlier detection (z-score)
+| Dataset   |   Rows | Columns | Format  |
+| --------- | -----: | ------: | ------- |
+| Customers |  5,000 |       4 | Parquet |
+| Products  |    200 |       3 | Parquet |
+| Sales     | 50,000 |       5 | Parquet |
 
-Logs are saved under:  
-```bash
-/logs/customer_log.txt
-/logs/product_log.txt
-/logs/sales_log.txt
-````
-
-### ✅ Automated (Great Expectations)
-
-* Email format validation (regex)
-* Type expectations
-* Row count boundaries
-* Null expectations
-
-HTML reports are generated at:
-
-```
-great_expectations/uncommitted/data_docs/local_site/index.html
-```
+Total monitored rows: **55,200**
 
 ---
 
-## 🌐 Dashboard
+## Tech Stack
 
-Start the Streamlit dashboard:
+* Python
+* pandas
+* pyarrow
+* Great Expectations
+* Streamlit
+* Apache Airflow DAG definitions
+* Parquet data lake layout
+* Synthetic enterprise-style data
+
+---
+
+## Setup
+
+Python 3.10 is recommended.
 
 ```bash
-streamlit run dashboard.py
+git clone https://github.com/AjaySreekumar47/enterprise-data-quality-monitoring.git
+cd enterprise-data-quality-monitoring/enterprise-data-quality-monitoring
+python -m venv .venv
 ```
 
-Expose it publicly:
+Activate the environment.
+
+Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+macOS/Linux:
 
 ```bash
-ngrok http 8501
+source .venv/bin/activate
 ```
 
----
-
-## 🌀 Airflow DAGs
-
-Each table has its own DAG:
-
-* `customer_validation_dag.py`
-* `product_validation_dag.py`
-* `sales_validation_dag.py`
-
-A master orchestrator DAG runs them in sequence:
-
-* `master_validation_dag.py`
-
-All scripts trigger validations using:
+Install core dependencies:
 
 ```bash
-/usr/local/envs/ge-env/bin/python3.9 validate_customer.py
+python -m pip install --upgrade pip setuptools wheel
+pip install pandas==1.5.3 numpy==1.23.5 pyarrow openpyxl faker great_expectations==0.16.8 streamlit
 ```
+
+Airflow is listed as an optional orchestration dependency. It is best installed and run in Linux, WSL, or Docker rather than native Windows.
 
 ---
 
-## 📦 Setup Instructions
+## Run Validations
 
-1. Clone the repo
-2. Create virtualenv using Python 3.9
-3. Install dependencies:
+Run all table-level validations:
 
 ```bash
-pip install -r requirements.txt
+python scripts/run_all_validations.py
 ```
 
-4. Set up Great Expectations:
+Or run each validation independently:
 
 ```bash
-great_expectations init
+python scripts/validate_customer.py
+python scripts/validate_product.py
+python scripts/validate_sales.py
 ```
 
-5. Launch Airflow and Streamlit as needed
+The validation scripts automatically discover available monthly Parquet partitions under:
+
+```text
+data_governance_project/data_lake/raw/year=2023/month=*/
+```
 
 ---
 
-## 📌 Example Use Cases
+## Launch Dashboard
 
-* Building robust **data quality pipelines** for new data lakes
-* Validating ETL jobs with **automated data contracts**
-* Auditing schema drift and **compliance metrics**
-* Running **governance dashboards** for business and technical stakeholders
+```bash
+streamlit run streamlit_app/dashboard.py
+```
+
+The dashboard includes:
+
+* Executive summary metrics
+* Dataset health snapshot
+* Dataset schema profiles
+* Numeric summaries
+* Manual validation log viewer
+* Embedded Great Expectations Data Docs
 
 ---
 
-## 👨‍💻 Author
+## Great Expectations Reports
 
-**Ajay Sreekumar**
-AI Research Engineer | Data Science & Platform Engineering | MLOps & Governance
+After validation, the dashboard reads the generated GE report from:
+
+```text
+great_expectations/uncommitted/data_docs/index.html
+```
+
+The project uses Great Expectations suites for:
+
+```text
+customer_suite
+product_suite
+sales_suite
+```
 
 ---
 
-## 📝 License
+## Optional Airflow Orchestration
 
-This project is open-source and available under the [MIT License](LICENSE).
+The `dags/` folder contains optional Airflow DAGs:
+
+| DAG                          | Purpose                                                   |
+| ---------------------------- | --------------------------------------------------------- |
+| `customer_validation_dag.py` | Runs customer validation                                  |
+| `product_validation_dag.py`  | Runs product validation                                   |
+| `sales_validation_dag.py`    | Runs sales validation                                     |
+| `master_validation_dag.py`   | Runs customer, product, and sales validations in sequence |
+
+For local Windows use, prefer:
+
+```bash
+python scripts/run_all_validations.py
+```
+
+For Airflow execution, use a Linux, WSL, or Docker environment and point Airflow’s DAG folder to this repo’s `dags/` directory.
+
+---
+
+## What This Project Demonstrates
+
+This project demonstrates practical data engineering and governance skills:
+
+* Designing a small enterprise-style data lake structure
+* Validating datasets with Great Expectations
+* Building reusable validation scripts
+* Creating business-friendly monitoring dashboards
+* Separating validation logic from orchestration logic
+* Providing optional Airflow DAGs for scheduled execution
+* Making Colab-originated code portable for local execution
+
+---
+
+## Known Limitations
+
+* The included data is synthetic and intended for demonstration.
+* The current data lake contains one monthly partition: `month=07`.
+* Airflow DAGs are included as optional orchestration definitions and are best run in Linux/WSL/Docker.
+* Great Expectations is pinned to a legacy-compatible version for this project.
+
+---
+
+## Author
+
+Ajay Sreekumar
+
+---
+
+## License
+
+This project is open-source and available under the MIT License.
