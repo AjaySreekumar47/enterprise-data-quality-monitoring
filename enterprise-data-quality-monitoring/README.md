@@ -1,16 +1,3 @@
-Perfect. This is the exact staged set we want.
-
-Now we need to rewrite the README before committing, because the current README is still outdated and overclaims/points to wrong paths.
-
-Open:
-
-```powershell
-notepad README.md
-```
-
-Replace the full README with this:
-
-````markdown
 # Enterprise Data Quality & Governance Monitoring System
 
 A local, portfolio-ready data quality monitoring project for synthetic enterprise datasets. The project demonstrates raw data ingestion, Parquet-based data lake storage, manual quality logs, Great Expectations validation suites, a Streamlit monitoring dashboard, and optional Airflow DAG orchestration.
